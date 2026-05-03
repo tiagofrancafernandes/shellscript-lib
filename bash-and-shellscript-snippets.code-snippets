@@ -1,0 +1,63 @@
+{
+    /**
+    Place your snippets for shellscript here. Each snippet is defined under a snippet name and has a prefix, body and
+    description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+    same ids are connected.
+    Example:
+    "Bash print using echo": {
+        "scope": "bash,sh,shellscript",
+        "prefix": [
+            "bash:print_string",
+            "fn:print_string",
+            "print_string",
+            "fn__print_string",
+        ],
+        "body": [
+            "echo \"${1:text to print}\"",
+        ],
+        "description": "Bash print content using echo"
+    },
+    **/
+
+    /* You can also restrict snippets to specific files using include/exclude patterns: */
+    // "Test snippet": {
+    //     "prefix": "test",
+    //     "body": "test('$1', () => {\n\t$0\n});",
+    //     "include": ["**/*.test.ts", "*.spec.ts"],
+    //     "exclude": ["**/temp/*.ts"],
+    //     "description": "Insert test block"
+    // },
+
+    /*  */
+
+    "Bash to_bool": {
+        "scope": "bash,sh,shellscript",
+        "prefix": [
+            "bash:to_bool",
+            "fn:to_bool",
+            "to_bool",
+            "fn__to_bool",
+        ],
+        "body": [
+            "fn__to_bool \"${1:value_to_check}\" && echo 'is true' || echo 'is false'",
+        ],
+        "description": "Chech if value as boolean check"
+    },
+
+    "Bash check_common_true": {
+        "scope": "bash,sh,shellscript",
+        "prefix": [
+            "bash:check_common_true",
+            "fn:check_common_true",
+            "check_common_true",
+            "fn__check_common_true",
+        ],
+        "body": [
+            "fn__check_common_true \"${1:value_to_check}\" && echo 'is true' || echo 'is false'",
+        ],
+        "description": "Chech if value as boolean check"
+    },
+
+    // TODO: create other snippets from functions of lib.sh
+}
