@@ -64,6 +64,16 @@ fn__string_replace() {
     echo "$1" | sed "s/$2/$3/g"
 }
 
+## Check if command exists
+fn__command_exists() {
+    command -v "$1" > /dev/null 2>&1
+}
+
+### Usage
+# if fn__command_exists code; then
+#     code --locate-shell-integration-path zsh
+# fi
+
 #### [END OF] WIP FUNCTIONS
 ################################################################################
 
